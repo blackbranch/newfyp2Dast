@@ -46,7 +46,7 @@ stages:
 
     - bash: |
        chmod -R 777  ./
-       docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://-x xml_report.xml
+       docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://localhost/FYP_codes/Assignment%20files/assg_Login.php -x xml_report.xml
        true
 
 
