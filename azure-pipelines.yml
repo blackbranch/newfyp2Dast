@@ -44,7 +44,10 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Use PHP version $(phpVersion)'
 
-    #- bash: |
+    - bash: |
+       chmod -R 777  ./
+       docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://-x xml_report.xml
+       true
 
 
     - script: composer install --no-interaction --prefer-dist
