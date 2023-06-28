@@ -47,7 +47,7 @@ stages:
       displayName: 'Use PHP version $(phpVersion)'
 
     - bash: |
-       chmod -R 777  ./
+       chmod -R 777 ./
        cd /home/fyp23
        docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t http://localhost/FYP_codes/Assignment%20files/assg_Login.php -x xml_report.xml
        open syuk.txt
