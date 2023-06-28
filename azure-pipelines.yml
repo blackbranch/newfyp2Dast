@@ -8,18 +8,19 @@ trigger:
 
 #OWASP
 
+
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: 'a068a273-1851-4f02-989b-ede1bc270b2d'
 
   # Web app name
-  webAppName: ''
+  webAppName: 'phptestapp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'phptestapp'
 
   # Root folder under which your composer.json file is available.
   rootFolder: $(System.DefaultWorkingDirectory)
