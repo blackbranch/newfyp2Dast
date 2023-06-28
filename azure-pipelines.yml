@@ -50,8 +50,8 @@ stages:
        chmod -R 777 ./
        cd /home/fyp23
         #mkdir sem
-       #sudo docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t http://localhost/FYP_codes/Assignment%20files/assg_Login.php -r report.html
-       sudo docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t https://www.hackthissite.org/ -r report.html 
+       sudo docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t http://localhost/FYP_codes/Assignment%20files/assg_Login.php -r report.html
+       #sudo docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t https://www.hackthissite.org/ -r report.html 
        true
 
 
