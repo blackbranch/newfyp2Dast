@@ -51,7 +51,7 @@ stages:
        cd /home/fyp23
         #mkdir sem
         #docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t http://localhost/FYP_codes/Assignment%20files/assg_Login.php -x xml_report.xml
-       open /home/fyp23/syuk.txt
+       xdg-open /home/fyp23/syuk.txt
        true
 
 
