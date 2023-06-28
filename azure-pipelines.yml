@@ -52,9 +52,9 @@ stages:
        true
 
 
-    - script: composer install --no-interaction --prefer-dist
-      workingDirectory: $(rootFolder)
-      displayName: 'Composer install'
+    #- script: composer install --no-interaction --prefer-dist
+      #workingDirectory: $(rootFolder)
+      #displayName: 'Composer install'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
