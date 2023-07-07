@@ -58,7 +58,7 @@ stages:
     - bash: |
        sleep 25
        locate report.html
-       open report.html
+       open /home/fyp23/report.html
 
 
     #- script: composer install --no-interaction --prefer-dist
