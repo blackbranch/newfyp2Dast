@@ -55,10 +55,10 @@ stages:
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -t http://192.168.132.129/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r report.html -U Irfan
 
         #full-scan
-        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r fullscan_report.html -U Irfan -m 2 -T 15
+        docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r fullscan_report2.html -U Irfan -m 2 -T 15
         #baseline scan
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r report.html -U Irfan
-        docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r report2.html -U Irfan
+        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r baseline_report2.html -U Irfan
         
        true
     
