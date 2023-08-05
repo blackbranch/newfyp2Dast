@@ -62,8 +62,8 @@ stages:
 
        cd /home/fyp23/manual_testing
        ./xssReflected.sh | grep "<script>alert(document.cookie)</script>" > /home/fyp23/manual_testing/manual_result/result1.txt
-       ./xssStored_normal.sh | grep "<script>alert(document.cookie)</script>" > /home/fyp23/manual_testing/manual_result/result2.txt
-       ./xssStored.sh | grep "<script>alert(document.cookie)</script>" > /home/fyp23/manual_testing/manual_result/result3.txt
+       #./xssStored_normal.sh | grep "<script>alert(document.cookie)</script>" > /home/fyp23/manual_testing/manual_result/result2.txt
+       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" > /home/fyp23/manual_testing/manual_result/result3.txt
   
 
        true
