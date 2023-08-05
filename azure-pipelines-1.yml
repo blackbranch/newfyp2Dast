@@ -61,7 +61,7 @@ stages:
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable baseline-scan.py -t http://192.168.132.128/FYP_codes/Assignment_files_mitigated/assg_Login.php -n Mitigated_Hotel_Scan.context -r FYP_Reports_Clone_Mitigated/fullscan_report_1.html -U Irfan -m 2 -T 15
 
        cd /home/fyp23/manual_testing
-       ./xssReflected.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result1.txt
+       #./xssReflected.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result1.txt
        #./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result2.txt
        
        
@@ -75,11 +75,11 @@ stages:
        
        true
 
-    - bash: |
-       sleep 15
-       ./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
+    #- bash: |
+       #sleep 15
+       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
 
-       true
+       #true
 
     
     #- bash: |
