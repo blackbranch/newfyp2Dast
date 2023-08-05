@@ -66,10 +66,11 @@ stages:
     #- bash: |
        #sleep 25
        #locate report.html
-       #open /home/fyp23/report.html
+       #open /home/fyp23/
+       #open /home/fyp23/fullscan_report_1.html
+       #/home/fyp23/FYP_Reports_Clone_Vulnerable/fullscan_report_1.html 
+       #/home/fyp23/FYP_Reports_Clone_Mitigated/fullscan_report_1.html 
        
-       
-
 
     #- script: composer install --no-interaction --prefer-dist
       #workingDirectory: $(rootFolder)
