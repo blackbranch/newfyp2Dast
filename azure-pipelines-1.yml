@@ -71,18 +71,18 @@ stages:
 
        true
 
-    - bash: |
-       sleep 15
-       cd /home/fyp23/manual_testing
-       ./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" 
-       
-       true
-
     #- bash: |
        #sleep 15
-       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
-
+       #cd /home/fyp23/manual_testing
+       #./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" 
+       
        #true
+
+    - bash: |
+       sleep 15
+       ./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
+
+        true
 
     
     #- bash: |
