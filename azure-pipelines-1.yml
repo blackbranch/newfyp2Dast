@@ -33,7 +33,8 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-     default
+     #default
+     manual
       #vmImage: $(vmImageName)
     steps:
     - script: |
@@ -63,7 +64,7 @@ stages:
        cd /home/fyp23/manual_testing
 
 
-       #./xssReflected.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result1.txt
+       ./xssReflected.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result1.txt
        #./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result2.txt
        
        
@@ -78,11 +79,11 @@ stages:
        
        #true
 
-    - bash: |
-       sleep 15
-       ./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
+    #- bash: |
+       #sleep 15
+       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
 
-        true
+        #true
 
     
     #- bash: |
