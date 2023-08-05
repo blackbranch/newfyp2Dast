@@ -69,17 +69,17 @@ stages:
 
        true
 
-    #- bash: |
-       #sleep 15
-       #./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" 
+    - bash: |
+       sleep 15
+       ./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" 
        
-       #true
+       true
 
-    #- bash: |
-       #sleep 15
-       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
+    - bash: |
+       sleep 15
+       ./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
 
-       #true
+       true
 
     
     #- bash: |
