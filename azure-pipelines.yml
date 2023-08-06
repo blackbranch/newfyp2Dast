@@ -46,13 +46,13 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Use PHP version $(phpVersion)'
 
-    #- bash: |
-       #chmod -R 777 ./
-        #cd /home/fyp23
-        #mkdir sem
+    - bash: |
+       chmod -R 777 ./
+        cd /home/fyp23
+        
 
         #full-scan : vulnerable
-        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.130/FYP_codes/Assignment_files/assg_Login.php -n Vulnerable_Hotel_Scan.context -r FYP_Reports_Clone_Vulnerable/fullscan_report_1.html -U Irfan -m 2 -T 15
+        docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.130/FYP_codes/Assignment_files/assg_Login.php -n Vulnerable_Hotel_Scan.context -r FYP_Reports_Clone_Vulnerable/fullscan_report_1.html -U Irfan -m 2 -T 15
 
         #full-scan : mitigated assignments
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.128/FYP_codes/Assignment_files_mitigated/assg_Login.php -n Mitigated_Hotel_Scan.context -r FYP_Reports_Clone_Mitigated/fullscan_report_1.html -U Irfan -m 2 -T 15
@@ -60,7 +60,7 @@ stages:
         #baseline scan
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable baseline-scan.py -t http://192.168.132.128/FYP_codes/Assignment_files_mitigated/assg_Login.php -n Mitigated_Hotel_Scan.context -r FYP_Reports_Clone_Mitigated/fullscan_report_1.html -U Irfan -m 2 -T 15
 
-       #true
+       true
     
     #- bash: |
        #sleep 25
