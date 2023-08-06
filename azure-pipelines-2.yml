@@ -6,7 +6,7 @@
 trigger:
 - main
 
-#OWASP manual testing
+#OWASP manual testing MITIGATED 
 
 
 variables:
