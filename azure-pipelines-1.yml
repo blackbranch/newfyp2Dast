@@ -50,27 +50,16 @@ stages:
 
     - bash: |
        chmod -R 777 ./
-        #mkdir sem
+     
        
         #full-scan
-        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.131/FYP_codes/Assignment_files/assg_Login.php -n Hosted_Hotel_Scan.context -r fullscan_report2.html -U Irfan -m 2 -T 15
         #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.130/FYP_codes/Assignment_files/assg_Login.php -n Vulnerable_Hotel_Scan.context -r FYP_Reports_Clone_Vulnerable/fullscan_report_1.html -U Irfan -m 2 -T 15
-
-        #full-scan : mitigated assignments
-        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-full-scan.py -t http://192.168.132.128/FYP_codes/Assignment_files_mitigated/assg_Login.php -n Mitigated_Hotel_Scan.context -r FYP_Reports_Clone_Mitigated/fullscan_report_1.html -U Irfan -m 2 -T 15
-
-        #baseline scan
-        #docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable baseline-scan.py -t http://192.168.132.128/FYP_codes/Assignment_files_mitigated/assg_Login.php -n Mitigated_Hotel_Scan.context -r FYP_Reports_Clone_Mitigated/fullscan_report_1.html -U Irfan -m 2 -T 15
 
        cd /home/fyp23/manual_testing
 
 
-       ./xssReflected.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result1.txt
-       #./xssStored_normalPage.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result2.txt
+       ./xssReflected.sh | grep "<script>alert(document.cookie)</script>" 
        
-       
-       #./xssStored.sh | grep "<script>alert(document.cookie)</script>" #> /home/fyp23/manual_testing/manual_result/result3.txt
-
        true
 
     - bash: |
@@ -118,24 +107,3 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
-
-#- stage: Deploy
-  #displayName: 'Deploy Web App'
-  #dependsOn: Build
-  #condition: succeeded()
-  #jobs:
-  #- deployment: DeploymentJob
-    #pool:
-     #default
-       #vmImage: $(vmImageName)
-    #environment: $(environmentName)
-    #strategy:
-      #runOnce:
-        #deploy:
-          #steps:
-          #- task: AzureWebApp@1
-            #displayName: 'Deploy Azure Web App : '
-            #inputs:
-              #azureSubscription: $(azureSubscription)
-              #appName: $(webAppName)
-              #package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
