@@ -35,8 +35,7 @@ stages:
     pool:
      #default
      manual
-     #manual2
-      #vmImage: $(vmImageName)
+     
     steps:
     - script: |
         sudo update-alternatives --set php /usr/bin/php$(phpVersion)
