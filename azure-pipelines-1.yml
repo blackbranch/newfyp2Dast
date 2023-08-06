@@ -86,6 +86,12 @@ stages:
        ./xssStored.sh | grep "<script>alert(document.cookie)</script>" 
 
         true
+    - bash: |
+       sleep 5
+       cd /home/fyp23/manual_testing
+       ./upload.sh | grep -E -v '\.(jpg|jpeg|png|gif)$'
+
+        true
 
     
     #- bash: |
