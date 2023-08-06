@@ -89,12 +89,14 @@ stages:
     - bash: |
        sleep 5
        cd /home/fyp23/manual_testing
-       ./upload.sh | grep -E -v '\.(jpg|jpeg|png|gif)$'
+       ./upload.sh | grep -P "The following files have been uploaded successfully to /uploads:<br>~\w+\.(?!jpg|jpeg|png|gif)[^.]+<br>"
+
 
         true
 
     
     #- bash: |
+     #./upload.sh | grep -E -v '\.(jpg|jpeg|png|gif)$' () ---- this is the first one 
        #sleep 25
        #locate report.html
        #open /home/fyp23/report.html
