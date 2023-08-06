@@ -34,7 +34,8 @@ stages:
   - job: BuildJob
     pool:
      #default
-     manual
+     #manual
+     manual2
       #vmImage: $(vmImageName)
     steps:
     - script: |
